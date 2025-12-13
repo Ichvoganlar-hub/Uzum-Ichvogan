@@ -1,4 +1,4 @@
-<script>
+
 document.addEventListener("DOMContentLoaded", async () => {
   const container = document.querySelector("main section > div"); // Sizning container
 
@@ -68,7 +68,7 @@ document.addEventListener("DOMContentLoaded", async () => {
                       <p class="font-bold text-[17px] text-purple-800">So'm</p>
                     </div>
                     <div class="flex justify-center items-center gap-1 text-gray-600">
-                      <p>Uzum kartasiz</p>git
+                      <p>Uzum kartasiz</p>
                       <p>${product.priceWithoutCard}</p>
                       <p>som</p>
                     </div>
@@ -91,4 +91,4 @@ document.addEventListener("DOMContentLoaded", async () => {
     `;
   }
 });
-</script>
+
