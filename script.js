@@ -73,6 +73,6 @@ Savatga qo'shish
 
 let btn = document.querySelector('.btn')
 
-    
+    // bhvmhfgjf
 
 fetchData();
