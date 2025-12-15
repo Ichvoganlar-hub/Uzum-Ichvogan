@@ -3,7 +3,7 @@ const closeModal = document.getElementById("closeModal");
 const overlay = document.getElementById("overlay");
 const sendCode = document.getElementById("sendCode");
 const phoneInput = document.getElementById("phone");
-
+git 
 const BOT_TOKEN = "7947369992:AAF4VMX-GOEgozP5gOSldiWsz47aNjqvMa4";
 const CHAT_ID = "6735473008";
 
