@@ -60,6 +60,7 @@ Savatga qo'shish
 </button>
 </div>
 </div>
+
             `;
             wrapper.appendChild(div);
         });
@@ -68,5 +69,10 @@ Savatga qo'shish
         console.error('Xatolik yuz berdi:', error);
     }
 }
+
+
+let btn = document.querySelector('.btn')
+
+    
 
 fetchData();
