@@ -14,11 +14,7 @@ async function fetchData() {
             let div = document.createElement('div');
             div.classList.add('card');
             div.innerHTML = `
-
-
                 <div class="bg-white rounded-2xl shadow-lg w-[260px] overflow-hidden">
-
-
 <div class="relative p-4">
 <img src="${product.image}" />
 <button class="absolute top-3 right-3 bg-white rounded-full p-1 shadow">
@@ -64,6 +60,10 @@ Savatga qo'shish
         console.error('Xatolik yuz berdi:', error);
     }
 }
-btn = document.querySelector('.btn')
+
+
+
+let btn = document.querySelector('.btn')
+
 
 fetchData();
