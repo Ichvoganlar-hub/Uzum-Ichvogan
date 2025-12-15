@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
 
-  // ❌ Agar savat bo‘sh bo‘lsa
+
   if (cart.length === 0) {
     container.innerHTML = `
       <div class="text-center py-20 text-gray-500 text-lg">
@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
     return;
   }
 
-  // Header
+
   container.innerHTML = `
     <div class="flex items-baseline gap-2 pb-6">
       <h1 class="text-gray-800 font-medium text-xl">Savatingiz,</h1>
@@ -69,7 +69,6 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-// ➕➖ SON O‘ZGARTIRISH
 function changeCount(index, value) {
   const cart = JSON.parse(localStorage.getItem("cart"));
   cart[index].count += value;
@@ -80,7 +79,6 @@ function changeCount(index, value) {
   location.reload();
 }
 
-// ❌ O‘CHIRISH
 function removeItem(index) {
   const cart = JSON.parse(localStorage.getItem("cart"));
   cart.splice(index, 1);
