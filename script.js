@@ -32,14 +32,11 @@ async function fetchData() {
 </div>
 
 
-
-
 <!-- Content -->
 <div class="p-4">
 <h3 class="text-sm font-semibold leading-snug">
 Podguznik Huggies Elite Soft, 1 size, 50 dona
 </h3>
-
 
 <!-- Price -->
 <div class="mt-2">
@@ -47,12 +44,10 @@ Podguznik Huggies Elite Soft, 1 size, 50 dona
 <span class="text-sm text-gray-400 line-through ml-2">${product.monthlyPrice}</span>
 </div>
 
-
 <!-- Monthly -->
 <div class="mt-1 text-sm text-gray-600">
 <span class="font-semibold text-yellow-600">${product.imageLabel}</span>
 </div>
-
 
 <!-- Button -->
 <button class="mt-4 w-full bg-purple-600 hover:bg-purple-700 text-white py-2 rounded-xl text-sm font-medium transition">
@@ -64,15 +59,9 @@ Savatga qo'shish
             `;
             wrapper.appendChild(div);
         });
-
     } catch (error) {
         console.error('Xatolik yuz berdi:', error);
     }
 }
-
-
 let btn = document.querySelector('.btn')
-
-    
-
 fetchData();
