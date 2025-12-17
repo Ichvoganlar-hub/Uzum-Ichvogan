@@ -97,7 +97,7 @@ btn2.addEventListener('click', (e) => {
 
 
 
-
+// asfa
 
 function renderCategory(data) {
     let wrapper = document.querySelector('.wrapper');
