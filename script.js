@@ -11,7 +11,7 @@ function catalogBtn() {
     }
 }
 
-
+// asda
 
 let allProducts = [];
 
