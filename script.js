@@ -71,7 +71,7 @@ Savatga qo'shish
 
 
 
-
+// sevgi bu armon
 fetchData();
 
 
