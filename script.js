@@ -2,7 +2,15 @@ const catalogMenu = document.getElementById("catalog-menu")
 
 function catalogBtn() {
     catalogMenu.classList.toggle("open")
+
+    if (!catalogMenu.classList.contains("open")) {
+        let box = document.querySelector('.boxxx')
+        if (box) {
+            box.innerHTML = ""
+        }
+    }
 }
+
 
 
 let allProducts = [];
@@ -81,10 +89,14 @@ console.log(wrapper123);
 
 let btn1 = document.querySelector('.btn1')
 let btn2 = document.querySelector('.btn2')
+let btn3 = document.querySelector('.btn3')
+let btn4 = document.querySelector('.btn4')
+let btn5 = document.querySelector('.btn5')
+let btn6 = document.querySelector('.btn6')
 
 
 btn1.addEventListener('click', (e) => {
-    let kiyimlar = allProducts.filter((product) => product.category === "Kiyim" || product.category === "Poyabzallar")
+    let kiyimlar = allProducts.filter((product) => product.category === "Kiyim")
 
     renderCategory(kiyimlar)
 })
@@ -95,12 +107,36 @@ btn2.addEventListener('click', (e) => {
     renderCategory(kiyimlar)
 })
 
+btn3.addEventListener('click', (e) => {
+    let kiyimlar = allProducts.filter((product) => product.category === 'Elektronika')
+
+    renderCategory(kiyimlar)
+})
+
+btn4.addEventListener('click', (e) => {
+    let kiyimlar = allProducts.filter((product) => product.category === "Smartfonlar")
+
+    renderCategory(kiyimlar)
+})
+
+btn5.addEventListener('click', (e) => {
+    let kiyimlar = allProducts.filter((product) => product.category === 'Aksessuarlar')
+
+    renderCategory(kiyimlar)
+})
+
+btn6.addEventListener('click', (e) => {
+    let kiyimlar = allProducts.filter((product) => product.category === "Aksessuarlar")
+
+    renderCategory(kiyimlar)
+})
+
 
 
 
 
 function renderCategory(data) {
-    let wrapper = document.querySelector('.wrapper');
+    let wrapper = document.querySelector('.boxxx');
     wrapper.innerHTML = "";
 
     data.forEach((product) => {
@@ -119,3 +155,21 @@ function renderCategory(data) {
     });
 }
 
+
+const searchInput = document.querySelector('input[placeholder="Искать товары и категории"]');
+
+searchInput.addEventListener('input', (e) => {
+    const query = e.target.value.trim().toLowerCase();
+
+    if (query === "") {
+        document.querySelector('.boxxx').innerHTML = "";
+        return;
+    }
+
+    const filteredProducts = allProducts.filter(product => {
+        return product.name.toLowerCase().includes(query) ||
+            product.category.toLowerCase().includes(query);
+    });
+
+    renderCategory(filteredProducts);
+});
