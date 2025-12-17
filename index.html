@@ -1,40 +1,431 @@
 <!DOCTYPE html>
 <html lang="en">
 <<<<<<< HEAD
+<<<<<<< HEAD
+=======
+>>>>>>> bd37c109d311d7ace325525540005b6c1075cde0
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
 		<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css"
+		/>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="./main.css">
+
+  <title>Document</title>
+</head>
+<style>
+			.swiper {
+				width: 100%;
+				border-radius: 30px;
+				height: 100%;
+			}
+
+			.swiper-slide {
+				border-radius: 30px;
+				text-align: center;
+				font-size: 18px;
+				background: #444;
+				display: flex;
+
+				justify-content: center;
+				align-items: center;
+			}
+
+			.swiper-slide img {
+				display: block;
+				width: 100%;
+				height: 100%;
+				border-radius: 30px;
+
+				object-fit: cover;
+			}
+		</style>
 	</head>
+
 	<body>
-		<main>
-			<section class="mt-[20px]">
-				<div class="container mx-auto px-4 mt-6">
-					<div class="relative overflow-hidden rounded-2xl h-[400px]">
-						<div
-							id="slider" class="flex h-full transition-transform duration-500 ease-in-out">
-						
+		<header class="bg-[#F0F2F5]">
+			<div class="max-w-7xl mx-auto">
+				<nav>
+					<div class="flex justify-around py-[8px]">
+						<ul class="flex justify-center gap-[50px] w-[400px]">
+							<li
+								class="text-[15px] hover:text-[orange] transition-all hover:text-[16px] flex gap-[5px]"
+							>
+								<img
+									class="w-[23px] h-[17px]relative top-[4px]"
+									src="./SVG123.png"
+									alt=""
+								/><a href="">Toshkent </a
+								><img
+									class="w-[20px] h-[17px]relative top-[4px]"
+									src="./profil.png"
+									alt=""
+								/>
+							</li>
+							<li
+								class="text-[17px] hover:text-[orange] transition-all hover:text-[18px]"
+							>
+								<a href="">Пункты выдачи</a>
+							</li>
+						</ul>
+						<ul class="flex justify-between gap-[40px]">
+							<li
+								class="text-[17px] text-[#7F4DFF] hover:text-[orange] transition-all hover:text-[18px]"
+							>
+								<a href="">Стать продавцом</a>
+							</li>
+							<li
+								class="text-[17px] text-[#7F4DFF] hover:text-[orange] transition-all hover:text-[18px]"
+							>
+								<a href="">Открыть пункт выдачи</a>
+							</li>
+							<li
+								class="text-[17px] hover:text-[orange] transition-all hover:text-[18px]"
+							>
+								<a href="">Вопрос-ответ</a>
+							</li>
+							<li
+								class="text-[17px] hover:text-[orange] transition-all hover:text-[18px]"
+							>
+								<a href="">Мои заказы</a>
+							</li>
+							<li
+								class="text-[17px] hover:text-[orange] transition-all hover:text-[18px]"
+							>
+								<a class="flex" href=""
+									><img class="w-[20px] h-[20px]" src="./SVG.png" alt="" />
+									Русский</a
+								>
+							</li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		</header>
+
+		<header class="w-full bg-white">
+			<div
+				class="max-w-7xl mx-auto flex items-center justify-between py-3 px-4"
+			>
+				<div class="flex items-center space-x-4">
+					<img src="./Link.png" alt="" />
+
+					<button
+						onclick="catalogBtn()"
+						class="flex cursor-pointer items-center space-x-2 bg-purple-100 text-purple-700 px-4 py-2 rounded-md hover:bg-purple-200"
+					>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="w-5 h-5"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M4 6h16M4 12h16M4 18h16"
+							/>
+						</svg>
+						<span>Каталог</span>
+					</button>
+				</div>
+
+				<div class="flex-1 mx-6">
+					<div class="flex items-center border rounded-md px-3 py-2">
+						<input
+							type="text"
+							placeholder="Искать товары и категории"
+							class="w-full outline-none"
+						/>
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							class="w-5 h-5 text-gray-500"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+						>
+							<path
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								stroke-width="2"
+								d="M21 21l-4.35-4.35M10 18a8 8 0 100-16 8 8 0 000 16z"
+							/>
+						</svg>
+					</div>
+				</div>
+
+				<div class="flex items-center space-x-6 text-gray-700">
+					<div class="flex items-center space-x-1 cursor-pointer">
+						<p
+							class="flex hover:text-[orange] transition-all hover:text-[17px]"
+						>
+							<img src="./profill.png" alt="" /> Войти
+						</p>
+					</div>
+
+					<div class="flex items-center space-x-1 cursor-pointer">
+						<p
+							class="flex hover:text-[orange] transition-all hover:text-[17px]"
+						>
+							<img src="./serdte.png" alt="" /> Избранное
+						</p>
+					</div>
+
+					<div class="flex items-center space-x-1 cursor-pointer">
+						<p
+							class="flex hover:text-[orange] transition-all hover:text-[17px]"
+						>
+							<img src="./korzin.png" alt="" /> Корзина
+						</p>
+					</div>
+				</div>
+			</div>
+
+			<div
+				class="max-w-7xl mx-auto flex items-center space-x-6 px-4 py-3 text-sm overflow-x-auto"
+			>
+				<p class="flex hover:text-[orange] transition-all hover:text-[15px]">
+					<img class="w-[20px]" src="./Topsales.png.png" alt="" />Hafta
+					tovarlari
+				</p>
+
+				<p class="flex hover:text-[orange] transition-all hover:text-[15px]">
+					<img class="w-[20px]" src="./feshn3110.png.png" alt="" />Hafta
+					tovarlari
+				</p>
+
+				<p class="flex hover:text-[orange] transition-all hover:text-[15px]">
+					<img class="w-[20px]" src="./hobbi2110.png.png" alt="" />Hafta
+					tovarlari
+				</p>
+
+				<p class="flex hover:text-[orange] transition-all hover:text-[15px]">
+					<img class="w-[20px]" src="./smart2010.png.png" alt="" />Hafta
+					tovarlari
+				</p>
+
+				<p class="hover:text-[orange] transition-all hover:text-[15px]">
+					Turizm, baliq ovi va ovchilik
+				</p>
+				<p class="hover:text-[orange] transition-all hover:text-[15px]">
+					Elektronika
+				</p>
+				<p class="hover:text-[orange] transition-all hover:text-[15px]">
+					Maishiy texnika
+				</p>
+				<p class="hover:text-[orange] transition-all hover:text-[15px]">
+					Kiyim
+				</p>
+				<p class="hover:text-[orange] transition-all hover:text-[15px]">
+					Poyabzallar
+				</p>
+				<p class="hover:text-[orange] transition-all hover:text-[15px]">
+					Aksessuarlar
+				</p>
+				<p class="hover:text-[orange] transition-all hover:text-[15px]">
+					Ещё ▼
+				</p>
+			</div>
+		</header>
+
+		<main class="max-w-7xl mx-auto">
+			<section>
+				<div
+					id="catalog-menu"
+					class="catalog w-72 border-r px-4 py-3 space-y-3 text-sm"
+				>
+					<button
+						class="btn1 flex items-center gap-3 p-4 rounded-xl hover:bg-gray-100 transition btn"
+					>
+						<svg
+							class="w-6 h-6 text-orange-500"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							viewBox="0 0 24 24"
+						>
+							<path d="M4 7h16M4 12h16M4 17h16" />
+						</svg>
+						<span class="font-medium">Kiym</span>
+					</button>
+
+					<button
+						class="btn2 flex items-center gap-3 p-4 rounded-xl hover:bg-gray-100 transition btn"
+					>
+						<svg
+							class="w-6 h-6 text-purple-600"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							viewBox="0 0 24 24"
+						>
+							<path d="M12 2l2 4 4 2-4 2-2 4-2-4-4-2 4-2 2-4z" />
+						</svg>
+						<span class="font-medium">Poyabzallar</span>
+					</button>
+<!-- dasd -->
+					<button
+						class="flex items-center gap-3 p-4 rounded-xl hover:bg-gray-100 transition btn"
+					>
+						<svg
+							class="w-6 h-6 text-orange-500"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							viewBox="0 0 24 24"
+						>
+							<path d="M14.7 6.3l3 3-8.4 8.4H6.3v-3.3z" />
+						</svg>
+						<span class="font-medium">Elektronika</span>
+					</button>
+
+					<button
+						class="flex items-center gap-3 p-4 rounded-xl hover:bg-gray-100 transition btn"
+					>
+						<svg
+							class="w-6 h-6 text-purple-600"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							viewBox="0 0 24 24"
+						>
+							<rect x="7" y="2" width="10" height="20" rx="2" />
+						</svg>
+						<span class="font-medium">Smartfonlar</span>
+					</button>
+
+					<button
+						class="flex items-center gap-3 p-4 rounded-xl hover:bg-gray-100 transition btn"
+					>
+						<svg
+							class="w-6 h-6 text-green-600"
+							fill="none"
+							stroke="currentColor"
+							stroke-width="2"
+							viewBox="0 0 24 24"
+						>
+							<path d="M12 2l7 7-7 7-7-7 7-7z" />
+						</svg>
+						<span class="font-medium">Aksessuarlar</span>
+					</button>
+
+					<button
+						class="flex items-center gap-3 p-4 rounded-xl hover:bg-gray-100 transition btn"
+					>
+						<svg
+							width="24"
+							height="24"
+							viewBox="0 0 24 24"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								opacity="0.75"
+								fill-rule="evenodd"
+								clip-rule="evenodd"
+								d="M8 6C6.34315 6 5 7.34315 5 9V17C5 15.3431 6.34315 14 8 14H16C17.6569 14 19 15.3431 19 17V9C19 7.34315 17.6569 6 16 6H8Z"
+								fill="#FF9500"
+							/>
+							<path
+								opacity="0.5"
+								d="M5 17C5 15.3431 6.34315 14 8 14H16C17.6569 14 19 15.3431 19 17V19C19 20.6569 17.6569 22 16 22H8C6.34315 22 5 20.6569 5 19V17Z"
+								fill="#FF9500"
+							/>
+						</svg>
+						<span class="font-medium">Uy-ro‘zg‘or buyumlari</span>
+					</button>
+				</div>
+			</section>
+			<section class="Itachi">
+				<div class="container">
+					<div class="flex flex-col">
+						<div class="h-[500px]">
+							<div class="swiper mySwiper">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<img
+											src="https://images.uzum.uz/d506sn3tqdhua1usn7b0/main_page_banner.jpg"
+											alt=""
+										/>
+									</div>
+									<div class="swiper-slide">
+										<img
+											src="https://images.uzum.uz/d50ls03s2tab83s6hi10/main_page_banner.jpg"
+											alt=""
+										/>
+									</div>
+									<div class="swiper-slide">
+										<img
+											src="https://images.uzum.uz/d50ebc8jsv1neacpbiug/main_page_banner.jpg"
+											alt=""
+										/>
+									</div>
+									<div class="swiper-slide">
+										<img
+											src="https://images.uzum.uz/d18fmngn274lpu39pnp0/main_page_banner.jpg"
+											alt=""
+										/>
+									</div>
+									<div class="swiper-slide">
+										<img
+											src="https://images.uzum.uz/d50fl9btqdhua1uso9ng/main_page_banner.jpg"
+											alt=""
+										/>
+									</div>
+								</div>
+								<div class="swiper-button-next"></div>
+								<div class="swiper-button-prev"></div>
+							</div>
 						</div>
+						<div class="flex gap-[100px] justify-between items-center">
+							<button
+								class="Itachibtn  flex items-center gap-[30px] px-[10px] mt-[30px] bg-gray-200 hover:bg-gray-300 w-[300px] rounded-lg transition-all text-black py-[30px]"><img width="40px" src="https://static.uzum.uz/static/promo_images/756b6f56-9d2d-414c-a9d3-37d40d1c808b" alt="">
+								<p>Onalar va bolalar uchun</p>
+							</button>
+							<button
+								class="Itachibtn  flex items-center gap-[30px] px-[10px]  mt-[30px] bg-gray-200 hover:bg-gray-300 w-[300px] rounded-lg transition-all text-black py-[30px]"><img width="40px" src="https://static.uzum.uz/static/promo_images/a266cae1-db3a-4b40-a984-cf9220d9b2e8" alt="">
+              <p>Arzon narxlar kafolati</p>
+              </button>
 
-						<button
-							onclick="prev()"
-							class="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/40 text-white text-2xl flex items-center justify-center"
-						>
-							‹
-						</button>
-
-						<button
-							onclick="next()"
-							class="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-black/40 text-white text-2xl flex items-center justify-center"
-						>
-							›
-						</button>
+							<button
+								class="Itachibtn  flex items-center gap-[30px] px-[10px]  mt-[30px] bg-gray-200 hover:bg-gray-300 w-[300px] rounded-lg transition-all text-black py-[30px]"><img width="40px" src="http://static.uzum.uz/static/promo_images/ed14619f-24fe-48ed-96f7-5d2043fc0de4" alt="">
+								<p>Zamonaviy bozor</p>
+							</button>
+							<button class="Ita  flex items-center gap-[30px] px-[10px]  mt-[30px] bg-gray-200 hover:bg-gray-300 w-[300px] rounded-lg transition-all text-black py-[30px]"><img width="40px" src="https://static.uzum.uz/static/promo_images/f23bd39d-326b-459f-8ad4-8ea31d037e73" alt="">
+								<p>Yangi yil</p>
+							</button>
+						</div>
 					</div>
 				</div>
 			</section>
 		</main>
+		<div class="max-w-7xl mx-auto">
+			<div class="wrapper flex justify-evenly items-center flex-wrap"></div>
+		</div>
+
+		<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+
+		<script>
+			var swiper = new Swiper('.mySwiper', {
+				navigation: {
+					nextEl: '.swiper-button-next',
+					prevEl: '.swiper-button-prev',
+				},
+			})
+		</script>
+		<script src="./script.js"></script>
 	</body>
+<<<<<<< HEAD
 =======
   <head>
     <meta charset="UTF-8" />
@@ -349,4 +740,6 @@
     <script src="./script.js"></script>
   </body>
 >>>>>>> e5a7455d5e8a1fb9bb0478849201b3cfa4363b19
+=======
+>>>>>>> bd37c109d311d7ace325525540005b6c1075cde0
 </html>
