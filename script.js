@@ -163,6 +163,8 @@ const cart = getCart();
 
 korzinkaDiv.innerHTML = "";
 
+
+
 if (cart.length === 0) {
     korzinkaDiv.innerHTML = `<p class="text-gray-500 text-lg">Savatingiz bo‘sh</p>`;
 } else {
