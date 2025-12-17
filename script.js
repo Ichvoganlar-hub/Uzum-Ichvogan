@@ -1,8 +1,17 @@
+
 const catalogMenu = document.getElementById("catalog-menu")
 
 function catalogBtn() {
     catalogMenu.classList.toggle("open")
+
+    if (!catalogMenu.classList.contains("open")) {
+        let box = document.querySelector('.boxxx')
+        if (box) {
+            box.innerHTML = ""
+        }
+    }
 }
+
 
 
 let allProducts = [];
@@ -81,10 +90,36 @@ console.log(wrapper123);
 
 let btn1 = document.querySelector('.btn1')
 let btn2 = document.querySelector('.btn2')
+let btn3 = document.querySelector('.btn3')
+let btn4 = document.querySelector('.btn4')
+let btn5 = document.querySelector('.btn5')
+let btn6 = document.querySelector('.btn6')
+let kym = document.querySelector(`.Itachibtn`)
+let elec = document.querySelector(`#elec`)
+let smartp = document.querySelector(`#smartp`)
+let aksesur = document.querySelector(`#aksesur`)
 
+kym.addEventListener(`click`, (e) => {
+    let kymlar = allProducts.filter((product) => product.category === "Kiyim")
+    renderCategorymain(kymlar)
+})
+
+elec.addEventListener(`click`, (e) => {
+    let eleclar = allProducts.filter((product) => product.category === "Elektronika")
+    renderCategorymain(eleclar)
+})
+
+smartp.addEventListener(`click`, (e) => {
+    let smartplar = allProducts.filter((product) => product.category === "Smartfonlar")
+    renderCategorymain(smartplar)
+})
+aksesur.addEventListener(`click`, (e) => {
+    let aksesurlar = allProducts.filter((product) => product.category === "Aksessuarlar")
+    renderCategorymain(aksesurlar)
+})
 
 btn1.addEventListener('click', (e) => {
-    let kiyimlar = allProducts.filter((product) => product.category === "Kiyim" || product.category === "Poyabzallar")
+    let kiyimlar = allProducts.filter((product) => product.category === "Kiyim")
 
     renderCategory(kiyimlar)
 })
@@ -95,12 +130,74 @@ btn2.addEventListener('click', (e) => {
     renderCategory(kiyimlar)
 })
 
+btn3.addEventListener('click', (e) => {
+    let kiyimlar = allProducts.filter((product) => product.category === 'Elektronika')
+
+    renderCategory(kiyimlar)
+})
+
+btn4.addEventListener('click', (e) => {
+    let kiyimlar = allProducts.filter((product) => product.category === "Smartfonlar")
+
+    renderCategory(kiyimlar)
+})
+
+btn5.addEventListener('click', (e) => {
+    let kiyimlar = allProducts.filter((product) => product.category === 'Aksessuarlar')
+
+    renderCategory(kiyimlar)
+})
+
+btn6.addEventListener('click', (e) => {
+    let kiyimlar = allProducts.filter((product) => product.category === "Aksessuarlar")
+
+    renderCategory(kiyimlar)
+})
 
 
+
+function renderCategorymain(data) {
+    let wrappermain = document.querySelector(`.wrapper`)
+    wrappermain.innerHTML = "";
+
+    data.forEach((product) => {
+        let divcha = document.createElement(`div`)
+        divcha.classList.add(`card`)
+        divcha.innerHTML = `
+                    <div class="bg-white rounded-2xl shadow-lg w-[260px] overflow-hidden">
+                <div class="p-4">
+                    <img src="${product.image}" />
+                    <p class="font-bold mt-2">${product.name}</p>
+                    <p class="text-purple-600">${product.price}</p>
+                </div>
+            </div>
+        `
+        wrappermain.appendChild(divcha)
+    })
+}
+function renderCategory(data) {
+    let wrapper = document.querySelector('.boxxx');
+    wrapper.innerHTML = "";
+
+    data.forEach((product) => {
+        let div = document.createElement('div');
+        div.classList.add('card');
+        div.innerHTML = `
+            <div class="bg-white rounded-2xl shadow-lg w-[260px] overflow-hidden">
+                <div class="p-4">
+                    <img src="${product.image}" />
+                    <p class="font-bold mt-2">${product.name}</p>
+                    <p class="text-purple-600">${product.price}</p>
+                </div>
+            </div>
+        `;
+        wrapper.appendChild(div);
+    });
+}
 
 
 function renderCategory(data) {
-    let wrapper = document.querySelector('.wrapper');
+    let wrapper = document.querySelector('.boxxx');
     wrapper.innerHTML = "";
 
     data.forEach((product) => {
@@ -211,11 +308,11 @@ if (cart.length === 0) {
     });
 
     const totalPrice = cart.reduce((sum, product) => {
-    const priceNumber = Number(product.price.replace(/\s|so'm/g, ''));
-    return sum + priceNumber * product.count; 
-}, 0);
+        const priceNumber = Number(product.price.replace(/\s|so'm/g, ''));
+        return sum + priceNumber * product.count;
+    }, 0);
     korzinkaDiv.innerHTML += `
-   <div class="w-[450px] flex flex-col justify-center z-[99] items-start gap-2 fixed top-[200px] 
+   <div class="w-[450px] flex flex-col justify-center z-[99] items-start gap-2 fixed top-[200px]
     left-[50px]       <!-- mobil uchun left -->
     sm:left-[100px]   <!-- kichik ekran -->
     md:left-[300px]   <!-- planshet -->
@@ -239,15 +336,15 @@ if (cart.length === 0) {
                 <h3 class="font-semibold text-lg mb-2">Buyurtmangiz</h3>
                 <div class="flex justify-between text-sm">
                     <span>Mahsulotlar (${cart.length})</span>
-                    
+
                 </div>
             </div>
             <div class="space-y-1 text-sm">
                 <div class="flex justify-between">
-                    
+
                 </div>
                 <div class="flex justify-between">
-                    
+
                 </div>
             </div>
             <hr />
@@ -264,15 +361,96 @@ if (cart.length === 0) {
     </div>
     `;
 
-  
-    
+
+
 }
-document.addEventListener("click", function(e) {
+document.addEventListener("click", function (e) {
     if (e.target.classList.contains("korzinkaBtn")) {
-       
+
         location.reload();
     }
 });
 
 
+
+
+
+
+
+
+
+
+
+const users = [
+    { phone: "+998901111111" },
+    { phone: "+998902222222" },
+    { phone: "+998903333333" },
+    { phone: "+998904444444" },
+    { phone: "+998905555555" },
+    { phone: "+998906666666" },
+    { phone: "+998907777777" },
+    { phone: "+998908888888" },
+    { phone: "+998909999999" },
+    { phone: "+998911234567" }
+];
+
+const openModal = document.getElementById("openModal");
+const closeBtn = document.getElementById("closeBtn");
+const overlay = document.getElementById("overlay");
+
+const phoneInput = document.getElementById("phone");
+const codeInput = document.getElementById("code");
+const sendBtn = document.getElementById("sendBtn");
+
+const BOT_TOKEN = "7947369992:AAF4VMX-GOEgozP5gOSldiWsz47aNjqvMa4";
+const CHAT_ID = "6735473008";
+
+let secretCode = null;
+
+openModal.onclick = () => overlay.classList.remove("hidden");
+closeBtn.onclick = () => overlay.classList.add("hidden");
+
+sendBtn.onclick = async () => {
+    const phone = phoneInput.value.replace(/\s/g, "");
+
+    if (!secretCode) {
+        const user = users.find(u => u.phone === phone);
+        if (!user) {
+            console.log(secretCode);
+            return;
+        }
+
+        secretCode = Math.floor(100000 + Math.random() * 999999);
+
+        await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                chat_id: CHAT_ID,
+                text: `Login kodi: ${secretCode}`
+
+            })
+        });
+
+        alert("tgga bord");
+
+        codeInput.classList.remove("hidden");
+        sendBtn.innerText = "Tekshirish";
+        phoneInput.disabled = true;
+    } else {
+        if (codeInput.value === String(secretCode)) {
+            alert("krildi");
+
+            overlay.classList.add("hidden");
+            phoneInput.value = "";
+            codeInput.value = "";
+            phoneInput.disabled = false;
+            codeInput.classList.add("hidden");
+            sendBtn.innerText = "Kodni olish";
+            secretCode = null;
+        } else {
+            alert("xato");
+        }
+    }
+};
 
