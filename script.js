@@ -220,7 +220,7 @@ if (cart.length === 0) {
     sm:left-[100px]   <!-- kichik ekran -->
     md:left-[300px]   <!-- planshet -->
     lg:left-[600px]   <!-- kichik desktop -->
-    xl:left-[900px]   <!-- katta desktop -->
+    xl:left-[900px]   <!-- katta dsktop -->
 ">
 
         <div class="border bg-white  border-gray-200 w-[450px] h-[90px] flex flex-col justify-center items-center px-[20px] rounded-xl">
