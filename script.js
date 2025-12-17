@@ -371,3 +371,84 @@ document.addEventListener("click", function (e) {
 
 
 
+
+
+
+
+
+
+
+
+const users = [
+    { phone: "+998901111111" },
+    { phone: "+998902222222" },
+    { phone: "+998903333333" },
+    { phone: "+998904444444" },
+    { phone: "+998905555555" },
+    { phone: "+998906666666" },
+    { phone: "+998907777777" },
+    { phone: "+998908888888" },
+    { phone: "+998909999999" },
+    { phone: "+998911234567" }
+];
+
+const openModal = document.getElementById("openModal");
+const closeBtn = document.getElementById("closeBtn");
+const overlay = document.getElementById("overlay");
+
+const phoneInput = document.getElementById("phone");
+const codeInput = document.getElementById("code");
+const sendBtn = document.getElementById("sendBtn");
+
+const BOT_TOKEN = "7947369992:AAF4VMX-GOEgozP5gOSldiWsz47aNjqvMa4";
+const CHAT_ID = "6735473008";
+
+let secretCode = null;
+
+openModal.onclick = () => overlay.classList.remove("hidden");
+closeBtn.onclick = () => overlay.classList.add("hidden");
+
+sendBtn.onclick = async () => {
+    const phone = phoneInput.value.replace(/\s/g, "");
+
+    if (!secretCode) {
+        const user = users.find(u => u.phone === phone);
+        if (!user) {
+            console.log(secretCode);
+            return;
+        }
+
+        secretCode = Math.floor(100000 + Math.random() * 999999);
+
+        await fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+                chat_id: CHAT_ID,
+                text: `Login kodi: ${secretCode}`
+
+            })
+        });
+
+        alert("tgga bord");
+
+        codeInput.classList.remove("hidden");
+        sendBtn.innerText = "Tekshirish";
+        phoneInput.disabled = true;
+    } else {
+        if (codeInput.value === String(secretCode)) {
+            alert("krildi");
+
+            overlay.classList.add("hidden");
+            phoneInput.value = "";
+            codeInput.value = "";
+            phoneInput.disabled = false;
+            codeInput.classList.add("hidden");
+            sendBtn.innerText = "Kodni olish";
+            secretCode = null;
+        } else {
+            alert("xato");
+        }
+    }
+};
+
