@@ -1,0 +1,249 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Qishki Kurtka",
+      "price": 480000,
+      "monthlyPrice": 40000,
+      "category": "Kiyim",
+      "image": "https://picsum.photos/seed/kiyim1/400/400",
+      "categoryLabel": "Kiyim",
+      "imageLabel": "40 000 so'm / oy"
+    },
+    {
+      "id": 2,
+      "name": "Sport Kurtka",
+      "price": 520000,
+      "monthlyPrice": 43333,
+      "category": "Kiyim",
+      "image": "https://picsum.photos/seed/kiyim2/400/400",
+      "categoryLabel": "Kiyim",
+      "imageLabel": "43 333 so'm / oy"
+    },
+    {
+      "id": 3,
+      "name": "Longsleeve",
+      "price": 220000,
+      "monthlyPrice": 18333,
+      "category": "Kiyim",
+      "image": "https://picsum.photos/seed/kiyim3/400/400",
+      "categoryLabel": "Kiyim",
+      "imageLabel": "18 333 so'm / oy"
+    },
+    {
+      "id": 4,
+      "name": "Futbolka",
+      "price": 180000,
+      "monthlyPrice": 15000,
+      "category": "Kiyim",
+      "image": "https://picsum.photos/seed/kiyim4/400/400",
+      "categoryLabel": "Kiyim",
+      "imageLabel": "15 000 so'm / oy"
+    },
+    {
+      "id": 5,
+      "name": "Krossovka",
+      "price": 650000,
+      "monthlyPrice": 54167,
+      "category": "Poyabzallar",
+      "image": "https://picsum.photos/seed/poyabzal1/400/400",
+      "categoryLabel": "Poyabzallar",
+      "imageLabel": "54 167 so'm / oy"
+    },
+    {
+      "id": 6,
+      "name": "Botinka",
+      "price": 720000,
+      "monthlyPrice": 60000,
+      "category": "Poyabzallar",
+      "image": "https://picsum.photos/seed/poyabzal2/400/400",
+      "categoryLabel": "Poyabzallar",
+      "imageLabel": "60 000 so'm / oy"
+    },
+    {
+      "id": 7,
+      "name": "Sport Oyoqkiyim",
+      "price": 590000,
+      "monthlyPrice": 49167,
+      "category": "Poyabzallar",
+      "image": "https://picsum.photos/seed/poyabzal3/400/400",
+      "categoryLabel": "Poyabzallar",
+      "imageLabel": "49 167 so'm / oy"
+    },
+    {
+      "id": 8,
+      "name": "Klassik Tufli",
+      "price": 610000,
+      "monthlyPrice": 50833,
+      "category": "Poyabzallar",
+      "image": "https://picsum.photos/seed/poyabzal4/400/400",
+      "categoryLabel": "Poyabzallar",
+      "imageLabel": "50 833 so'm / oy"
+    },
+    {
+      "id": 9,
+      "name": "Simsiz Quloqchin",
+      "price": 275000,
+      "monthlyPrice": 22917,
+      "category": "Elektronika",
+      "image": "https://picsum.photos/seed/elektr1/400/400",
+      "categoryLabel": "Elektronika",
+      "imageLabel": "22 917 so'm / oy"
+    },
+    {
+      "id": 10,
+      "name": "Powerbank",
+      "price": 330000,
+      "monthlyPrice": 27500,
+      "category": "Elektronika",
+      "image": "https://picsum.photos/seed/elektr2/400/400",
+      "categoryLabel": "Elektronika",
+      "imageLabel": "27 500 so'm / oy"
+    },
+    {
+      "id": 11,
+      "name": "Smart Soat",
+      "price": 490000,
+      "monthlyPrice": 40833,
+      "category": "Elektronika",
+      "image": "https://picsum.photos/seed/elektr3/400/400",
+      "categoryLabel": "Elektronika",
+      "imageLabel": "40 833 so'm / oy"
+    },
+    {
+      "id": 12,
+      "name": "Bluetooth Kolonka",
+      "price": 410000,
+      "monthlyPrice": 34167,
+      "category": "Elektronika",
+      "image": "https://picsum.photos/seed/elektr4/400/400",
+      "categoryLabel": "Elektronika",
+      "imageLabel": "34 167 so'm / oy"
+    },
+    {
+      "id": 13,
+      "name": "iPhone Smartfon",
+
+      "price": 7800000,
+      "monthlyPrice": 650000,
+      "category": "Smartfonlar",
+      "image": "https://picsum.photos/seed/phone1/400/400",
+      "categoryLabel": "Smartfonlar",
+      "imageLabel": "650 000 so'm / oy"
+    },
+    {
+      "id": 14,
+      "name": "Samsung Smartfon",
+      "price": 6200000,
+      "monthlyPrice": 516667,
+      "category": "Smartfonlar",
+      "image": "https://picsum.photos/seed/phone2/400/400",
+      "categoryLabel": "Smartfonlar",
+      "imageLabel": "516 667 so'm / oy"
+    },
+    {
+      "id": 15,
+      "name": "Redmi Smartfon",
+      "price": 3900000,
+      "monthlyPrice": 325000,
+      "category": "Smartfonlar",
+      "image": "https://picsum.photos/seed/phone3/400/400",
+      "categoryLabel": "Smartfonlar",
+      "imageLabel": "325 000 so'm / oy"
+    },
+    {
+      "id": 16,
+      "name": "Realme Smartfon",
+      "price": 3400000,
+      "monthlyPrice": 283333,
+      "category": "Smartfonlar",
+      "image": "https://picsum.photos/seed/phone4/400/400",
+      "categoryLabel": "Smartfonlar",
+      "imageLabel": "283 333 so'm / oy"
+    },
+    {
+      "id": 17,
+      "name": "Ryukzak",
+      "price": 310000,
+      "monthlyPrice": 25833,
+      "category": "Aksessuarlar",
+      "image": "https://picsum.photos/seed/aks1/400/400",
+      "categoryLabel": "Aksessuarlar",
+      "imageLabel": "25 833 so'm / oy"
+    },
+    {
+      "id": 18,
+      "name": "Soat",
+      "price": 210000,
+      "monthlyPrice": 17500,
+      "category": "Aksessuarlar",
+      "image": "https://picsum.photos/seed/aks2/400/400",
+      "categoryLabel": "Aksessuarlar",
+      "imageLabel": "17 500 so'm / oy"
+    },
+    {
+      "id": 19,
+      "name": "Shapka",
+      "price": 95000,
+      "monthlyPrice": 7917,
+      "category": "Aksessuarlar",
+      "image": "https://picsum.photos/seed/aks3/400/400",
+      "categoryLabel": "Aksessuarlar",
+      "imageLabel": "7 917 so'm / oy"
+    },
+    {
+      "id": 20,
+      "name": "Telefon G'ilofi",
+      "price": 85000,
+      "monthlyPrice": 7083,
+      "category": "Aksessuarlar",
+      "image": "https://picsum.photos/seed/aks4/400/400",
+      "categoryLabel": "Aksessuarlar",
+      "imageLabel": "7 083 so'm / oy"
+    },
+    {
+      "id": 21,
+      "name": "Elektr Choynak",
+      "price": 420000,
+      "monthlyPrice": 35000,
+      "category": "Uy-ro‘zg‘or buyumlari",
+      "image": "https://picsum.photos/seed/home1/400/400",
+      "categoryLabel": "Uy-ro‘zg‘or",
+      "imageLabel": "35 000 so'm / oy"
+    },
+    {
+      "id": 22,
+      "name": "Mikroto‘lqinli Pech",
+      "price": 1200000,
+      "monthlyPrice": 100000,
+      "category": "Uy-ro‘zg‘or buyumlari",
+      "image": "https://picsum.photos/seed/home2/400/400",
+      "categoryLabel": "Uy-ro‘zg‘or",
+      "imageLabel": "100 000 so'm / oy"
+    },
+    {
+      "id": 23,
+      "name": "Changyutgich",
+      "price": 1600000,
+      "monthlyPrice": 133333,
+      "category": "Uy-ro‘zg‘or buyumlari",
+      "image": "https://picsum.photos/seed/home3/400/400",
+      "categoryLabel": "Uy-ro‘zg‘or",
+      "imageLabel": "133 333 so'm / oy"
+    },
+    {
+      "id": 24,
+      "name": "Ventilyator",
+      "price": 380000,
+      "monthlyPrice": 31667,
+      "category": "Uy-ro‘zg‘or buyumlari",
+      "image": "https://picsum.photos/seed/home4/400/400",
+      "categoryLabel": "Uy-ro‘zg‘or",
+      "imageLabel": "31 667 so'm / oy"
+    }
+  ]
+}
+
+
+
+
