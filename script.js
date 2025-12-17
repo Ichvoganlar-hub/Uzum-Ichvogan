@@ -210,7 +210,7 @@ if (cart.length === 0) {
 
     const totalPrice = cart.reduce((sum, product) => {
     const priceNumber = Number(product.price.replace(/\s|so'm/g, ''));
-    return sum + priceNumber * product.count; // count bilan ko'paytirish
+    return sum + priceNumber * product.count; 
 }, 0);
     korzinkaDiv.innerHTML += `
    <div class="w-[450px] flex flex-col justify-center z-[99] items-start gap-2 fixed top-[200px] 
