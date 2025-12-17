@@ -83,7 +83,7 @@ Savatga qo'shish
 fetchData();
 
 
-
+// asdas
 let wrapper123 = document.querySelector('.wrapper123')
 console.log(wrapper123);
 
