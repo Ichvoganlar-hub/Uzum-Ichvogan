@@ -36,12 +36,14 @@ async function fetchData() {
                 <div class="bg-white rounded-2xl shadow-lg w-[260px] overflow-hidden">
 
 
-<div class="relative p-4">
-<img src="${product.image}" />
-<button class="absolute top-3 right-3 bg-white rounded-full p-1 shadow">
-❤️
-</button>
-</div>
+            <div class="relative p-4">
+                <img src="${product.image}" />
+                <button onclick="TS_btn(this)" 
+                        class="TS_btn absolute top-3 right-3 bg-white rounded-full p-1 shadow"
+                        data-id="${product.id}">
+                    ❤️
+                </button>
+            </div>
 
 
 
@@ -451,4 +453,46 @@ sendBtn.onclick = async () => {
         }
     }
 };
+
+
+
+// function TS_btn(btn) {
+//     let productId = btn.getAttribute('data-id');
+//     let card = btn.closest('.card');
+
+//     console.log("Bosilgan card:", card);
+//     console.log("Card product id:", productId);
+
+//     let tek = productId == card.id
+//     if (tek) {
+//         console.log("ishladi");
+        
+        
+//     } else {
+//         console.log("ishlamadi bich");
+        
+//     }
+// }
+
+
+
+function TS_btn(btn) {
+    let card = btn.closest('.card');           
+    let productId = btn.getAttribute('data-id');
+
+    let productData = {
+        id: productId,
+        html: card.innerHTML                   
+    };
+
+    let cart = getCart();
+
+    if (!cart.some(p => p.id === productId)) {
+        cart.push(productData);
+        saveCart(cart);
+        console.log("oxshadi jiggarr", productData);
+    } else {
+        console.log("ishlamadi jgaaarrrr", productData);
+    }
+}
 
